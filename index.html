@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Certificación ISO internacional sin pago anticipado. Paga solo después de emitido el certificado. Auditoría remota, acreditación UAF/IAF.">
+  <meta name="keywords" content="Certificación ISO, ISO 9001, certificación rápida, pago posterior, UAF, IAF, auditoría remota, América Latina">
+  <meta name="author" content="Continental Consulting">
+  <title>Continental Consulting | Certificación ISO - Paga después del certificado</title>
+  <!-- Font Awesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #0A1C2F;
+      scroll-behavior: smooth;
+      line-height: 1.4;
+    }
+    :root {
+      --deep-blue: #0A1C2F;
+      --gold: #C9A03D;
+      --gold-light: #DDB45E;
+      --white: #ffffff;
+      --gray-bg: #F8FAFF;
+      --gray-text: #2C3E50;
+      --shadow-card: 0 25px 45px -12px rgba(0,0,0,0.12);
+      --shadow-sm: 0 12px 25px -8px rgba(0,0,0,0.05);
+      --glass: rgba(255,255,255,0.92);
+    }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 28px; }
+    section { padding: 85px 0; }
+    .section-title { font-size: 2.3rem; font-weight: 700; text-align: center; margin-bottom: 52px; color: var(--deep-blue); position: relative; letter-spacing: -0.3px; }
+    .section-title:after { content: ''; display: block; width: 70px; height: 3px; background: var(--gold); margin: 18px auto 0; border-radius: 4px; }
+    .btn {
+      display: inline-block; padding: 14px 34px; border-radius: 48px; font-weight: 700;
+      text-decoration: none; transition: all 0.25s ease; text-align: center; cursor: pointer; border: none; font-size: 1rem;
+    }
+    .btn-primary { background: var(--gold); color: var(--deep-blue); box-shadow: 0 8px 18px rgba(201,160,61,0.3); }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-3px); box-shadow: 0 15px 28px -8px rgba(201,160,61,0.45); }
+    .btn-whatsapp { background: #25D366; color: white; box-shadow: 0 6px 14px rgba(37,211,102,0.25); }
+    .btn-whatsapp:hover { background: #1da959; transform: translateY(-3px); }
+    .btn-outline-gold { border: 1.5px solid var(--gold); background: transparent; color: var(--deep-blue); }
+    .btn-outline-gold:hover { background: var(--gold); color: var(--deep-blue); transform: translateY(-3px); }
+
+    /* Header fijo */
+    header { position: fixed; top: 0; width: 100%; padding: 18px 0; z-index: 1100; transition: 0.3s; background: transparent; }
+    header.scrolled { background: rgba(10,28,47,0.94); backdrop-filter: blur(12px); padding: 12px 0; box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+    header.scrolled .logo, header.scrolled nav a { color: white; }
+    .logo { 
+      font-size: 1.7rem; 
+      font-weight: 800; 
+      color: var(--deep-blue); 
+      letter-spacing: -0.4px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo img {
+      height: 45px;
+      width: auto;
+    }
+    .logo span { color: var(--gold); }
+    .header-container { display: flex; justify-content: space-between; align-items: center; }
+    nav { display: flex; gap: 32px; align-items: center; }
+    nav a { text-decoration: none; font-weight: 500; color: var(--deep-blue); transition: 0.2s; font-size: 0.98rem; }
+    .menu-mobile { display: none; font-size: 1.8rem; cursor: pointer; }
+    @media (max-width: 900px) {
+      nav { position: fixed; top: 70px; left: -100%; background: var(--deep-blue); width: 75%; height: 100vh; flex-direction: column; padding: 40px 28px; transition: 0.3s; gap: 32px; z-index: 1050; }
+      nav.open { left: 0; }
+      nav a { color: white; font-size: 1.2rem; }
+      .menu-mobile { display: block; color: var(--deep-blue); }
+      header.scrolled .menu-mobile { color: white; }
+      .logo img { height: 35px; }
+    }
+    /* Hero Section Premium - Certificado REAL */
+    .hero { background: linear-gradient(135deg, #F5F9FF 0%, #FFFFFF 100%); padding-top: 150px; position: relative; overflow: hidden; }
+    .hero:before { content: ''; position: absolute; top: -20%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(201,160,61,0.03) 0%, rgba(201,160,61,0) 70%); border-radius: 50%; pointer-events: none; }
+    .hero-grid { display: flex; flex-wrap: wrap; align-items: center; gap: 55px; }
+    .hero-content { flex: 1.1; }
+    .badge-gold { background: var(--gold); color: var(--deep-blue); display: inline-block; padding: 7px 22px; border-radius: 40px; font-weight: 800; font-size: 0.8rem; margin-bottom: 28px; letter-spacing: 0.3px; }
+    .hero h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 22px; color: var(--deep-blue); letter-spacing: -1px; }
+    .hero-highlight { color: var(--gold); position: relative; display: inline-block; }
+    .hero-sub { font-size: 1.2rem; color: #2c3e50; margin-bottom: 28px; font-weight: 500; }
+    .bullet-mini { display: flex; flex-wrap: wrap; gap: 24px; margin: 32px 0; list-style: none; }
+    .bullet-mini li { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.95rem; }
+    .bullet-mini i { color: var(--gold); font-size: 1.2rem; }
+    .hero-buttons { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 20px; }
+    .trust-badges { display: flex; gap: 30px; margin-top: 38px; flex-wrap: wrap; align-items: center; }
+    .trust-badges img { height: 40px; width: auto; object-fit: contain; }
+    .trust-badges span { display: flex; align-items: center; gap: 8px; background: #F0F3F9; padding: 5px 16px; border-radius: 40px; font-weight: 600; font-size: 0.8rem; }
+
+    /* MOCKUP CERTIFICADO REAL PREMIUM */
+    .hero-image { flex: 1; text-align: center; perspective: 1000px; }
+    .certificate-mockup {
+      background: linear-gradient(145deg, #fff, #fefaf0);
+      border-radius: 32px;
+      box-shadow: 0 35px 55px -18px rgba(0,0,0,0.2), 0 0 0 1px rgba(201,160,61,0.2);
+      padding: 28px 22px 28px 22px;
+      transition: all 0.35s ease;
+      backdrop-filter: blur(2px);
+      border: 1px solid rgba(201,160,61,0.3);
+    }
+    .certificate-mockup:hover { transform: translateY(-6px) rotateY(2deg); box-shadow: 0 40px 65px -15px rgba(0,0,0,0.25); }
+    .cert-label {
+      background: var(--gold);
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+      color: var(--deep-blue);
+    }
+    .certificate-inner {
+      background: #fff;
+      border: 2px solid #eee7dc;
+      padding: 24px 18px;
+      border-radius: 24px;
+      text-align: center;
+    }
+    .certificate-img {
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .certificate-inner img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+    .real-note { font-size: 0.75rem; color: #5e6f8d; margin-top: 16px; font-weight: 500; }
+    /* Cards y estadísticas */
+    .stats-grid { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; margin: 45px 0 20px; }
+    .stat-item { text-align: center; background: white; padding: 20px 32px; border-radius: 70px; box-shadow: var(--shadow-sm); font-weight: 700; }
+    .stat-number { font-size: 2rem; font-weight: 800; color: var(--gold); }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; }
+    .card-premium { background: white; border-radius: 32px; padding: 36px 24px; text-align: center; box-shadow: var(--shadow-sm); transition: 0.3s; border: 1px solid rgba(0,0,0,0.02); }
+    .card-premium:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); border-color: var(--gold); }
+    .card-premium i { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; }
+    .risk-zero { background: var(--gray-bg); border-radius: 50px; padding: 50px 30px; text-align: center; }
+    .badge-safe { background: #e9f5e9; color: #1f7b1f; padding: 8px 28px; border-radius: 40px; font-weight: 700; display: inline-block; margin-bottom: 24px; }
+    .accred-logos { display: flex; justify-content: center; gap: 45px; flex-wrap: wrap; margin: 35px 0 20px 0; }
+    .accred-item { 
+      background: white; 
+      padding: 18px 36px; 
+      border-radius: 60px; 
+      box-shadow: var(--shadow-sm); 
+      font-weight: 800; 
+      font-size: 1.2rem; 
+      color: var(--deep-blue);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .accred-item img {
+      height: 35px;
+      width: auto;
+    }
+    .accred-footer-text {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #5a6e8a;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      opacity: 0.85;
+    }
+    .express-box { background: linear-gradient(125deg, #FFF9EB, #FFF4E0); border-left: 7px solid var(--gold); padding: 44px 36px; border-radius: 40px; text-align: center; }
+    /* Formulario premium */
+    .form-premium { background: white; border-radius: 48px; box-shadow: var(--shadow-card); padding: 48px; max-width: 880px; margin: 0 auto; }
+    input, select, textarea { width: 100%; padding: 15px 22px; border-radius: 32px; border: 1px solid #E6EDF4; font-size: 1rem; transition: 0.2s; background: #FEFEFE; }
+    .btn-submit { background: var(--deep-blue); color: white; width: 100%; font-size: 1.2rem; padding: 16px; border-radius: 56px; font-weight: 700; transition: 0.2s; border: none; cursor: pointer; }
+    .btn-submit:hover { background: #1C314A; transform: scale(0.98); }
+    .urgent-badge { background: #FFF1E0; border-left: 4px solid var(--gold); font-weight: 700; }
+    .sticky-cta-mobile { display: none; }
+    @media (max-width: 700px) {
+      .sticky-cta-mobile { display: fixed; bottom: 0; left: 0; width: 100%; background: var(--deep-blue); padding: 12px; z-index: 1050; display: flex; gap: 12px; justify-content: center; box-shadow: 0 -5px 20px rgba(0,0,0,0.1); }
+      .sticky-cta-mobile .btn { padding: 10px 18px; font-size: 0.9rem; margin: 0; }
+      section { padding: 60px 0; }
+      .hero h1 { font-size: 2.3rem; }
+      .certificate-mockup { padding: 16px; }
+      .accred-item img { height: 25px; }
+      .accred-item { padding: 12px 24px; font-size: 1rem; }
+    }
+    .whatsapp-float { position: fixed; bottom: 28px; right: 28px; background: #25D366; border-radius: 50px; padding: 14px 22px; color: white; font-size: 1.8rem; box-shadow: 0 8px 20px rgba(0,0,0,0.2); z-index: 1100; transition: 0.2s; }
+    footer { background: var(--deep-blue); color: #b9c8e8; padding: 50px 0 30px; }
+    .fade-up { animation: fadeUp 0.6s ease forwards; opacity: 0; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } from { opacity: 0; transform: translateY(24px); } }
+    .limit-cup { background: rgba(201,160,61,0.12); border-radius: 40px; padding: 6px 16px; font-weight: 700; font-size: 0.8rem; display: inline-block; margin-top: 10px; }
+    
+    /* Estilos normas ISO */
+    .normas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 28px;
+    }
+    .norma-card {
+      background: white;
+      border-radius: 28px;
+      padding: 28px 18px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+      border: 1px solid rgba(0,0,0,0.02);
+    }
+    .norma-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-card);
+      border-color: var(--gold);
+    }
+    .norma-card i {
+      font-size: 2.2rem;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .norma-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--deep-blue);
+    }
+    .norma-card .norma-version {
+      font-size: 0.7rem;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .norma-card p {
+      font-size: 0.8rem;
+      color: #5e6f8d;
+      font-weight: 500;
+    }
+
+    /* SECCIÓN DE CLIENTES / PRUEBA SOCIAL CON TESTIMONIOS */
+    .clientes-section {
+      background: var(--gray-bg);
+    }
+    .testimonials-grid {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .testimonial-card {
+      background: white;
+      border-radius: 32px;
+      padding: 32px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      flex: 1;
+      min-width: 280px;
+      max-width: 380px;
+      border: 1px solid rgba(201,160,61,0.1);
+    }
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-card);
+      border-color: rgba(201,160,61,0.3);
+    }
+    .testimonial-logo {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #f5f0e0, #fff);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      border: 2px solid var(--gold);
+    }
+    .testimonial-logo i {
+      font-size: 2rem;
+      color: var(--gold);
+    }
+    /* Para imágenes reales de logo de clientes */
+    .testimonial-logo img {
+      width: 85%;
+      height: auto;
+      max-width: 50px;
+      object-fit: contain;
+    }
+    .testimonial-card h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--deep-blue);
+      margin-bottom: 5px;
+    }
+    .testimonial-company {
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+    }
+    .testimonial-country {
+      font-size: 0.7rem;
+      color: #5a6e8a;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+    .testimonial-text {
+      font-style: italic;
+      color: #2c3e50;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin: 15px 0;
+    }
+    .testimonial-star {
+      color: var(--gold);
+      margin-top: 10px;
+      font-size: 0.85rem;
+    }
+    .clientes-footer-text {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #5a6e8a;
+      font-weight: 500;
+      margin-top: 48px;
+      letter-spacing: 0.2px;
+      border-top: 1px solid rgba(0,0,0,0.05);
+      padding-top: 32px;
+      max-width: 550px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 700px) {
+      .testimonial-card {
+        padding: 24px;
+        min-width: 260px;
+      }
+      .clientes-footer-text {
+        font-size: 0.8rem;
+        margin-top: 32px;
+        padding-top: 24px;
+      }
+    }
+    .contact-info {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      text-align: center;
+      color: #5a6e8a;
+    }
+    .contact-info a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    /* ESTILOS TEMPORIZADOR COMPACTO */
+    .top-urgency-bar {
+      background: linear-gradient(135deg, #0A1C2F 0%, #1a2a3a 100%);
+      border-bottom: 2px solid var(--gold);
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      padding: 8px 0;
+    }
+    .urgency-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .urgency-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(201,160,61,0.15);
+      padding: 6px 14px;
+      border-radius: 40px;
+    }
+    .urgent-dot {
+      width: 8px;
+      height: 8px;
+      background: #ff4444;
+      border-radius: 50%;
+      animation: pulseDot 1.2s infinite;
+    }
+    .urgent-text {
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.5px;
+    }
+    .countdown-compact {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0,0,0,0.3);
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-weight: 700;
+    }
+    .countdown-compact i { color: var(--gold); font-size: 0.85rem; margin-right: 4px; }
+    .countdown-compact span { color: white; font-size: 0.9rem; }
+    .countdown-compact span:first-of-type {
+      font-weight: 800;
+      background: rgba(255,255,255,0.1);
+      padding: 2px 6px;
+      border-radius: 20px;
+    }
+    .urgency-right { display: flex; gap: 12px; }
+    .urgency-right span {
+      font-size: 0.7rem;
+      color: #b9c8e8;
+      background: rgba(255,255,255,0.05);
+      padding: 4px 10px;
+      border-radius: 40px;
+    }
+    @keyframes pulseDot {
+      0%,100%{ opacity:1; transform:scale(1); }
+      50%{ opacity:0.5; transform:scale(1.3); }
+    }
+    @media (max-width: 768px) {
+      .urgency-container { justify-content: center; gap: 10px; flex-wrap: wrap; padding: 6px 12px; }
+      .urgency-left { padding: 4px 10px; }
+      .urgent-text { font-size: 0.7rem; }
+      .countdown-compact { padding: 4px 10px; }
+      .countdown-compact span { font-size: 0.8rem; }
+      .urgency-right span { font-size: 0.65rem; padding: 3px 8px; }
+      .urgency-right span:first-child { display: inline-block; }
+      .urgency-right span:last-child { display: none; }
+    }
+    @media (min-width: 769px) {
+      .urgency-right span:first-child,
+      .urgency-right span:last-child { display: inline-block; }
+    }
+
+    /* FAQ 9 preguntas */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      background: white;
+      border-radius: 20px;
+      padding: 20px 24px;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+    .faq-item:hover {
+      box-shadow: var(--shadow-card);
+      border-color: rgba(201,160,61,0.2);
+    }
+    .faq-question {
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--deep-blue);
+      gap: 12px;
+    }
+    .faq-question i {
+      color: var(--gold);
+      transition: transform 0.2s ease;
+      font-size: 0.9rem;
+    }
+    .faq-answer {
+      display: none;
+      margin-top: 14px;
+      color: #5a6e8a;
+      line-height: 1.5;
+      font-size: 0.9rem;
+      padding-top: 12px;
+      border-top: 1px solid #eef2f6;
+    }
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+    .faq-item.open .faq-question i {
+      transform: rotate(180deg);
+    }
+    @media (max-width: 768px) {
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ESTILO CLIENTE CARD LINK: solo clicable, sin alterar diseño */
+    .cliente-card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .cliente-card-link:hover {
+      text-decoration: none;
+    }
+    /* mantener el efecto hover original del card */
+    .cliente-card-link .testimonial-card {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <div class="container header-container">
+      <div class="logo">
+        <img src="logo/logo-continental.png" alt="Continental Consulting" onerror="this.style.display='none'; this.nextSibling.style.display='inline';">
+        <span style="display: none;">Continental <span>Consulting</span></span>
+        <span>Continental <span>Consulting</span></span>
+      </div>
+      <div class="menu-mobile" id="menuToggle"><i class="fas fa-bars"></i></div>
+      <nav id="navbar">
+        <a href="#inicio">Inicio</a>
+        <a href="#proceso">Proceso rápido</a>
+        <a href="#confianza">Acreditación</a>
+        <a href="#normas">Normas ISO</a>
+        <a href="#form-lead" class="btn-cotizar-header" style="background:var(--gold); padding:8px 24px; border-radius:40px; font-weight:700;">Cotizar ahora</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BARRA DE URGÊNCIA COMPACTA -->
+  <div class="top-urgency-bar">
+    <div class="urgency-container">
+      <div class="urgency-left">
+        <span class="urgent-dot"></span>
+        <span class="urgent-text">Últimos cupos</span>
+      </div>
+      <div class="countdown-compact">
+        <i class="fas fa-clock"></i>
+        <span id="hours2">23</span><span>h</span>
+        <span id="minutes2">37</span><span>m</span>
+        <span id="seconds2">38</span><span>s</span>
+      </div>
+      <div class="urgency-right">
+        <span>✅ 530+ empresas</span>
+        <span>⚡ Respuesta 2h</span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO ... (se mantiene igual) -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content fade-up">
+          <div class="badge-gold"><i class="fas fa-shield-alt"></i> PAGO SÓLO DESPUÉS DEL CERTIFICADO</div>
+          <h1>Certificación <span class="hero-highlight">ISO Internacional</span> rápida y sin inversión inicial</h1>
+          <p class="hero-sub">Auditoría 100% remota · Respaldo UAF/IAF · Certificado válido para licitaciones globales. <strong>Paga únicamente cuando tu certificado esté emitido.</strong></p>
+          <ul class="bullet-mini">
+            <li><i class="fas fa-check-circle"></i> Sin pago anticipado</li>
+            <li><i class="fas fa-rocket"></i> Certificación en días</li>
+            <li><i class="fas fa-globe-americas"></i> Reconocimiento internacional</li>
+            <li><i class="fas fa-hand-holding-usd"></i> 3 cuotas sin interés</li>
+          </ul>
+          <div class="hero-buttons">
+            <a href="#form-lead" class="btn btn-primary"><i class="fas fa-file-signature"></i> Quiero mi certificación ISO</a>
+            <a href="https://wa.me/595981123207?text=Hola%2C%20necesito%20certificarme%20ISO%20urgente" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> Asesoría express</a>
+          </div>
+          <div class="trust-badges">
+            <span><img src="logo/uaf-logo.png" alt="UAF" onerror="this.style.display='none'; this.nextSibling.style.display='inline';"><span style="display: none;">UAF</span><span>UAF</span></span>
+            <span><img src="logo/iaf-logo.png" alt="IAF" onerror="this.style.display='none'; this.nextSibling.style.display='inline';"><span style="display: none;">IAF</span><span>IAF</span></span>
+            <span><img src="logo/ias-logo.png" alt="IAS" onerror="this.style.display='none'; this.nextSibling.style.display='inline';"><span style="display: none;">IAS</span><span>IAS</span></span>
+            <span><i class="fas fa-clock"></i> Respuesta ≤ 2h</span>
+          </div>
+        </div>
+        <div class="hero-image fade-up">
+          <div class="certificate-mockup">
+            <div class="cert-label"><i class="fas fa-award"></i> CERTIFICADO REAL EMITIDO</div>
+            <div class="certificate-inner">
+              <img src="logo/certificado-mockup.png" alt="Certificado ISO Internacional" class="certificate-img" onerror="this.src='https://placehold.co/400x300/f5f0e0/c9a03d?text=Certificado+ISO+Internacional';">
+              <div class="real-note">✨ Ejemplo real del certificado que recibirá tu empresa</div>
+            </div>
+            <p style="margin-top:16px; font-weight:500; font-size:0.8rem;"><i class="fas fa-check-circle" style="color:var(--gold);"></i> Más de 530+ empresas certificadas en Latinoamérica</p>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="margin-top: 20px;"><div class="stats-grid"><div class="stat-item"><span class="stat-number">530+</span><br>Empresas certificadas</div><div class="stat-item"><span class="stat-number">98%</span><br>Renovación anual</div><div class="stat-item"><span class="stat-number">≤3 días</span><br>Emisión post-auditoría</div></div></div>
+    </section>
+
+    <!-- SECCIÓN DE CLIENTES CON CARDS CLICABLES (manteniendo todo el diseño) -->
+    <section class="clientes-section">
+      <div class="container">
+        <h2 class="section-title">Empresas que ya confían en nosotros</h2>
+        <div class="testimonials-grid">
+          <!-- Card Cliente 1 - ahora clicable -->
+          <a href="https://www.continentalconsulting.org/testimonio-cliente1" target="_blank" rel="noopener noreferrer" class="cliente-card-link">
+            <div class="testimonial-card">
+              <div class="testimonial-logo">
+                <img src="logo/cliente1.png" alt="Cliente 1" onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-fire-extinguisher\'></i>'">
+              </div>
+              <h3>Charls Emmanuel Rivera Richardson</h3>
+              <div class="testimonial-company">R.E.R C&amp;J TRAINING FIRE &amp; RESCUE SRL</div>
+              <div class="testimonial-country"><i class="fas fa-map-marker-alt"></i> República Dominicana</div>
+              <div class="testimonial-text">"Gracias a Continental Consulting logramos nuestra certificación ISO sin pagar por adelantado. El proceso fue ágil, 100% remoto y el equipo nos acompañó en cada paso. ¡Altamente recomendado!"</div>
+              <div class="testimonial-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+          </a>
+          <!-- Card Cliente 2 - ahora clicable -->
+          <a href="https://www.continentalconsulting.org/testimonio-cliente2" target="_blank" rel="noopener noreferrer" class="cliente-card-link">
+            <div class="testimonial-card">
+              <div class="testimonial-logo">
+                <img src="logo/cliente2.png" alt="Cliente 2" onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-chart-line\'></i>'">
+              </div>
+              <h3>Federico Antonio Báez</h3>
+              <div class="testimonial-company">INVERSIONES BAEZFRED, S.R.L.</div>
+              <div class="testimonial-country"><i class="fas fa-map-marker-alt"></i> República Dominicana</div>
+              <div class="testimonial-text">"La experiencia con Continental Consulting fue excelente. Obtuvimos nuestra certificación ISO rápidamente y el modelo de pago después del certificado nos dio total confianza. ¡Seguiremos renovando!"</div>
+              <div class="testimonial-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+          </a>
+        </div>
+        <div class="clientes-footer-text">Clientes de distintos sectores ya confían en nuestro proceso de certificación internacional.</div>
+      </div>
+    </section>
+
+    <!-- EL RESTO DE SECCIONES se mantiene exactamente igual (por brevedad se conservan igual que original) -->
+    <section id="confianza"><div class="container"><h2 class="section-title">Líderes en certificación ISO sin riesgo financiero</h2><div class="cards-grid"><div class="card-premium"><i class="fas fa-hand-holding-usd"></i><h3>Pago 100% posterior</h3><p>Sólo pagas cuando tienes el certificado en tu poder. Compromiso real con tu éxito.</p></div><div class="card-premium"><i class="fas fa-stopwatch"></i><h3>Certificación ágil</h3><p>Proceso exprés: auditoría remota y certificado en aprox. 3-5 días hábiles después de la revisión.</p></div><div class="card-premium"><i class="fas fa-building"></i><h3>Acreditación internacional</h3><p>Organismos UAF / IAF / IAS – válido para licitaciones mundiales y contratos de alto nivel.</p></div><div class="card-premium"><i class="fas fa-chalkboard-user"></i><h3>Auditoría 100% remota</h3><p>Sin desplazamientos, máximo ahorro de tiempo y eficiencia para tu empresa.</p></div><div class="card-premium"><i class="fas fa-coins"></i><h3>Hasta 3 cuotas sin interés</h3><p>Financiamiento flexible post-certificado. Invierte sin presión.</p></div><div class="card-premium"><i class="fas fa-laptop-code"></i><h3>+ Sistema digital editable</h3><p>Incluimos un sistema de gestión digital moderno para facilitar la implementación. (Valor agregado)</p></div></div></div></section>
+    
+    <section id="proceso" style="background: var(--gray-bg);"><div class="container"><h2 class="section-title">Cómo obtener tu certificado ISO en pasos simples</h2><div class="flow-steps" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 28px;"><div class="step-item" style="background:white; border-radius:30px; padding:28px 18px; text-align:center; flex:1; min-width:160px;"><div style="background:var(--gold); width:45px; height:45px; border-radius:60px; display:flex; align-items:center; justify-content:center; font-weight:800; margin:0 auto 20px;">1</div><h3>Solicitud rápida</h3><p>Formulario o WhatsApp</p></div><div class="step-item" style="background:white; border-radius:30px; padding:28px 18px; text-align:center; flex:1; min-width:160px;"><div style="background:var(--gold); width:45px; height:45px; border-radius:60px; display:flex; align-items:center; justify-content:center; font-weight:800; margin:0 auto 20px;">2</div><h3>Propuesta en 24h</h3><p>Sin compromiso</p></div><div class="step-item" style="background:white; border-radius:30px; padding:28px 18px; text-align:center; flex:1; min-width:160px;"><div style="background:var(--gold); width:45px; height:45px; border-radius:60px; display:flex; align-items:center; justify-content:center; font-weight:800; margin:0 auto 20px;">3</div><h3>Auditoría remota</h3><p>Por expertos acreditados</p></div><div class="step-item" style="background:white; border-radius:30px; padding:28px 18px; text-align:center; flex:1; min-width:160px;"><div style="background:var(--gold); width:45px; height:45px; border-radius:60px; display:flex; align-items:center; justify-content:center; font-weight:800; margin:0 auto 20px;">4</div><h3>Certificado emitido</h3><p>Paga después de recibirlo</p></div></div><p style="text-align:center; margin-top: 40px; font-weight:700;"><i class="fas fa-bolt" style="color:var(--gold);"></i> Proyectos urgentes: cupos limitados para certificación express en menos de 20 días</p></div></section>
+    
+    <section><div class="container"><div class="risk-zero"><div class="badge-safe"><i class="fas fa-shield-virus"></i> RIESGO CERO TOTAL</div><h2 style="font-size: 2rem;">No pagas hasta que el certificado esté listo</h2><p style="max-width:750px; margin:24px auto; font-size:1.1rem;">Miles de empresas en Latinoamérica ya accedieron a su certificación ISO con este modelo. Primero emitimos, después facturamos. Condición exclusiva Continental Consulting.</p><div style="display:flex; justify-content:center; gap: 40px; flex-wrap:wrap; margin-top:32px;"><div><i class="fas fa-file-invoice-dollar fa-2x" style="color:var(--gold);"></i><br><strong>Pago post-emisión</strong></div><div><i class="fas fa-credit-card fa-2x" style="color:var(--gold);"></i><br><strong>3 cuotas sin interés</strong></div><div><i class="fas fa-check-circle fa-2x" style="color:var(--gold);"></i><br><strong>Sin letra chica</strong></div></div></div></div></section>
+
+    <section><div class="container"><h2 class="section-title">Acreditaciones de clase mundial</h2><div class="accred-logos"><div class="accred-item"><img src="logo/uaf-logo.png" alt="UAF"><span>UAF</span></div><div class="accred-item"><img src="logo/iaf-logo.png" alt="IAF"><span>IAF</span></div><div class="accred-item"><img src="logo/ias-logo.png" alt="IAS"><span>IAS</span></div></div><div class="accred-footer-text">Certificaciones emitidas a través de organismos acreditados con reconocimiento internacional.</div><p style="text-align:center; max-width:800px; margin:20px auto 0; font-size:0.95rem;">Certificados con membrecía internacional, aceptados por entidades reguladoras y en procesos de licitación global. La garantía de confianza que tu empresa necesita.</p></div></section>
+
+    <section id="normas"><div class="container"><h2 class="section-title">Certificamos las principales normas internacionales</h2><div class="normas-grid"><div class="norma-card"><i class="fas fa-chart-line"></i><h3>ISO 9001</h3><div class="norma-version">Sistema de Gestión de Calidad</div><p>Calidad</p></div><div class="norma-card"><i class="fas fa-leaf"></i><h3>ISO 14001</h3><div class="norma-version">Gestión Ambiental</div><p>Medio ambiente</p></div><div class="norma-card"><i class="fas fa-hard-hat"></i><h3>ISO 45001</h3><div class="norma-version">Salud y Seguridad Ocupacional</div><p>Seguridad del trabajo</p></div><div class="norma-card"><i class="fas fa-shield-alt"></i><h3>ISO 27001</h3><div class="norma-version">Seguridad de la Información</div><p>Cybersecurity / TI</p></div><div class="norma-card"><i class="fas fa-utensils"></i><h3>ISO 22000</h3><div class="norma-version">Seguridad de Alimentos</div><p>Alimentación</p></div><div class="norma-card"><i class="fas fa-vial"></i><h3>HACCP / GMP</h3><div class="norma-version">Buenas Prácticas</div><p>Inocuidad Alimentaria</p></div></div><p style="text-align:center; margin-top: 32px; font-size:0.85rem; color:#5e6f8d;"><i class="fas fa-check-circle" style="color:var(--gold);"></i> Consulta otras normas especializadas en nuestro formulario</p></div></section>
+
+    <!-- form lead y resto -->
+    <section id="form-lead" style="background: linear-gradient(120deg, #F4F8FF, #FFFFFF);"><div class="container"><div class="form-premium"><h2 style="font-size: 2rem; text-align:center;">Solicita cotización inmediata</h2><p style="text-align:center; margin-bottom: 28px;"><i class="fas fa-tachometer-alt"></i> Respuesta en menos de 2 horas · Cupos preferenciales</p><form id="leadForm"><div class="form-group"><input type="text" id="nombreCompleto" placeholder="Nombre completo *" required></div><div class="form-group"><input type="text" id="empresa" placeholder="Empresa *" required></div><div class="form-group"><select id="pais"><option value="">País</option><option>Honduras</option><option>El Salvador</option><option>República Dominicana</option><option>Panamá</option><option>Nicaragua</option><option>Guatemala</option><option>Costa Rica</option><option>Otro Latinoamérica</option></select></div><div class="form-group"><input type="tel" id="whatsapp" placeholder="WhatsApp (código país) *" required></div><div class="form-group"><input type="email" id="email" placeholder="Correo electrónico"></div><div class="form-group"><select id="normaSelect"><option value="">¿Qué norma ISO necesita?</option><option value="ISO 9001 — Sistema de Gestión de Calidad">ISO 9001 — Sistema de Gestión de Calidad (Calidad)</option><option value="ISO 14001 — Gestión Ambiental">ISO 14001 — Gestión Ambiental (Medio ambiente)</option><option value="ISO 45001 — Salud y Seguridad Ocupacional">ISO 45001 — Salud y Seguridad Ocupacional (Seguridad del trabajo)</option><option value="ISO 27001 — Seguridad de la Información">ISO 27001 — Seguridad de la Información (Cybersecurity / TI)</option><option value="ISO 22000 — Seguridad de Alimentos">ISO 22000 — Seguridad de Alimentos (Alimentación)</option><option value="HACCP / GMP — Inocuidad Alimentaria">HACCP / GMP — Inocuidad Alimentaria</option><option value="ISO 13485 — Dispositivos Médicos">ISO 13485 — Dispositivos Médicos</option><option value="ISO 50001 — Gestión de Energía">ISO 50001 — Gestión de Energía</option><option value="ISO 22301 — Continuidad del Negocio">ISO 22301 — Continuidad del Negocio</option><option value="ISO 37001 — Sistema Antisoborno">ISO 37001 — Sistema Antisoborno</option><option value="ISO 20000-1 — Gestión de Servicios TI">ISO 20000-1 — Gestión de Servicios TI</option><option value="ISO 17025 — Laboratorios">ISO 17025 — Laboratorios</option><option value="ISO 15189 — Laboratorios Médicos">ISO 15189 — Laboratorios Médicos</option><option value="ISO/IEC 42001 — Inteligencia Artificial">ISO/IEC 42001 — Inteligencia Artificial</option><option value="GLP — Buenas Prácticas de Laboratorio">GLP — Buenas Prácticas de Laboratorio</option><option value="BPF / GMP — Buenas Prácticas de Fabricación">BPF / GMP — Buenas Prácticas de Fabricación</option></select></div><div class="form-group"><input type="text" id="numEmpleados" placeholder="Número de empleados"></div><div class="form-group"><label><strong>Motivo principal</strong></label><select id="motivo"><option>Licitación o cliente exige certificado</option><option>Mejorar reputación y procesos</option><option>Diferenciación competitiva</option></select></div><div class="form-group"><label><strong>⚠️ ¿Nivel de urgencia?</strong></label><select id="urgentSelect" style="border-left:4px solid var(--gold);"><option>En 3 a 6 meses</option><option>En 1 a 3 meses</option><option>En menos de 30 días</option><option style="background:#FFF0D6; font-weight:800;">🚨 URGENTE - MENOS DE 15 DÍAS (cupo limitado)</option></select></div><div class="form-group"><textarea id="comentario" rows="2" placeholder="Comentario (opcional)"></textarea></div><button type="submit" class="btn btn-submit"><i class="fas fa-gem"></i> Obtener propuesta sin pago anticipado</button><p style="margin-top: 20px; font-size: 0.7rem; text-align:center;"><i class="fas fa-lock"></i> Datos protegidos · Asesor personalizado · Sin compromiso</p></form></div></div></section>
+
+    <section style="background: var(--gray-bg);"><div class="container"><h2 class="section-title">Preguntas frecuentes</h2><div class="faq-grid"><div class="faq-item"><div class="faq-question">💰 ¿Realmente se paga después del certificado? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Sí, Continental Consulting factura una vez el certificado internacional es emitido y entregado a tu empresa. Usted paga solo después de tener el certificado en su poder, sin ningún riesgo financiero.</div></div><div class="faq-item"><div class="faq-question">💻 ¿La auditoría es completamente remota? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Sí, 100% online mediante plataforma digital. No necesita desplazamientos, lo que ahorra tiempo y costos. Solo requiere una computadora con cámara y conexión a internet.</div></div><div class="faq-item"><div class="faq-question">🌍 ¿Mi certificado será válido para licitaciones internacionales? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Absolutamente. Contamos con acreditaciones UAF, IAF y IAS reconocidas globalmente. Su certificado será aceptado en licitaciones y contratos internacionales.</div></div><div class="faq-item"><div class="faq-question">📅 ¿Cuánto tiempo dura el proceso completo? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">El proceso estándar toma entre 15 a 30 días. Para casos urgentes, podemos emitir el certificado en menos de 15 días hábiles, sujeto a disponibilidad de cupos.</div></div><div class="faq-item"><div class="faq-question">💳 ¿Qué formas de pago aceptan después del certificado? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Aceptamos transferencia bancaria, tarjetas de crédito/débito, PayPal y hasta 3 cuotas sin interés. Todo después de que usted recibe su certificado.</div></div><div class="faq-item"><div class="faq-question">📄 ¿Qué documentación necesito para comenzar? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Solo necesita completar nuestro formulario de solicitud. Nuestro equipo le guiará en cada paso y le proporcionará toda la documentación necesaria para la auditoría.</div></div><div class="faq-item"><div class="faq-question">🔄 ¿La certificación tiene renovación anual? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Sí, la certificación ISO tiene vigencia de 3 años, con auditorías de seguimiento anuales. Ofrecemos planes de mantenimiento con condiciones preferenciales para nuestros clientes.</div></div><div class="faq-item"><div class="faq-question">⏱️ ¿Qué significa "respuesta en menos de 2 horas"? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Significa que después de enviar su solicitud, un asesor especializado le contactará por WhatsApp o email en un plazo máximo de 2 horas en días hábiles, para presentarle su propuesta personalizada.</div></div><div class="faq-item"><div class="faq-question">🏢 ¿En qué países de Latinoamérica operan? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Atendemos a toda Latinoamérica, con cobertura exprés en Honduras, Guatemala, El Salvador, Nicaragua, Costa Rica, Panamá y República Dominicana. Para otros países, consúltenos.</div></div></div></div></section>
+  </main>
+  <footer><div class="container" style="display:flex; justify-content:space-between; flex-wrap:wrap;"><div><h3 style="color:var(--gold);">Continental Consulting</h3><p>Certificación ISO sin pago anticipado<br><strong>WhatsApp:</strong> <a href="https://wa.me/595981123207" style="color:#25D366; text-decoration:none;">+595 981 123207</a><br><strong>Email:</strong> <a href="mailto:info@continentalconsulting.org" style="color:var(--gold); text-decoration:none;">info@continentalconsulting.org</a><br><strong>Web:</strong> <a href="https://www.continentalconsulting.org" target="_blank" style="color:var(--gold); text-decoration:none;">www.continentalconsulting.org</a><br>Oficina virtual para toda Latinoamérica</p></div><div><strong>Cobertura exprés</strong><br>Honduras, Guatemala, El Salvador, Nicaragua, Costa Rica, Panamá, República Dominicana.</div></div><div class="container" style="text-align:center; margin-top:38px;">© 2025 Continental Consulting – Certificación internacional, pago posterior a la emisión.</div></footer>
+  <a href="https://wa.me/595981123207?text=Necesito%20certificación%20ISO%20sin%20pago%20anticipado" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <div class="sticky-cta-mobile" id="stickyCtaMobile"><a href="#form-lead" class="btn btn-primary" style="background:var(--gold);">Certifícate ya</a><a href="https://wa.me/595981123207" class="btn btn-whatsapp">WhatsApp urgente</a></div>
+
+  <script>
+    window.addEventListener('scroll', () => { document.getElementById('header').classList.toggle('scrolled', window.scrollY > 30); });
+    document.getElementById('menuToggle').addEventListener('click', () => { document.getElementById('navbar').classList.toggle('open'); });
+    document.querySelectorAll('#navbar a').forEach(link => link.addEventListener('click', () => document.getElementById('navbar').classList.remove('open')));
+    document.querySelectorAll('.faq-item').forEach(item => { item.addEventListener('click', () => { item.classList.toggle('open'); }); });
+    const leadForm = document.getElementById('leadForm');
+    // URL CORRECTA DEL WEB APP - ACTUALIZADA
+    const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbwcxH0QeLdOBKJmMtsBupXFaSrSclijqvtt59FBkn-oTj-EJ7yf_4d5OlXC61OxcBQ/exec";
+    leadForm.addEventListener('submit', async (e) => { 
+      e.preventDefault(); 
+      const nombre = document.getElementById('nombreCompleto')?.value.trim() || ''; 
+      const empresa = document.getElementById('empresa')?.value.trim() || ''; 
+      const pais = document.getElementById('pais')?.value || ''; 
+      const whatsapp = document.getElementById('whatsapp')?.value.trim() || ''; 
+      const email = document.getElementById('email')?.value.trim() || ''; 
+      const normaISO = document.getElementById('normaSelect')?.value || ''; 
+      const numEmpleados = document.getElementById('numEmpleados')?.value.trim() || ''; 
+      const motivo = document.getElementById('motivo')?.value || ''; 
+      const urgencia = document.getElementById('urgentSelect')?.value || ''; 
+      const comentario = document.getElementById('comentario')?.value.trim() || ''; 
+      if(!nombre || !empresa || !pais || !whatsapp){ 
+        alert("⚠️ Por favor complete los campos obligatorios: Nombre completo, Empresa, País y WhatsApp."); 
+        return; 
+      } 
+      const formData = { 
+        nombreCompleto: nombre, 
+        empresa, 
+        pais, 
+        whatsapp, 
+        email, 
+        normaISO, 
+        numEmpleados, 
+        motivo, 
+        urgencia, 
+        comentario, 
+        timestamp: new Date().toLocaleString("es-ES") 
+      }; 
+      const submitBtn = leadForm.querySelector('button[type="submit"]'); 
+      const originalBtnText = submitBtn.innerHTML; 
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Enviando...'; 
+      submitBtn.disabled = true; 
+      try { 
+        const response = await fetch(GOOGLE_SHEET_URL, { 
+          method: "POST", 
+          headers: { "Content-Type": "application/json" }, 
+          body: JSON.stringify(formData) 
+        }); 
+        const result = await response.json();
+        if(result.success) {
+          alert(`✅ ¡Gracias ${nombre}! Su solicitud ha sido enviada correctamente. Un asesor de Continental Consulting le contactará por WhatsApp en menos de 2 horas.`);
+          leadForm.reset();
+        } else {
+          alert("❌ Error al enviar: " + result.message);
+        }
+      } catch (error) { 
+        console.error(error); 
+        alert("❌ Ocurrió un error al enviar el formulario. Por favor, intente nuevamente o contáctenos por WhatsApp."); 
+      } finally { 
+        submitBtn.innerHTML = originalBtnText; 
+        submitBtn.disabled = false; 
+      } 
+    });
+    if(window.innerWidth <= 700) document.getElementById('stickyCtaMobile').style.display = 'flex';
+    window.addEventListener('resize', () => { let st = document.getElementById('stickyCtaMobile'); if(window.innerWidth <= 700) st.style.display = 'flex'; else st.style.display = 'none'; });
+    let totalSecondsCompact = (23 * 3600) + (37 * 60) + 38;
+    function updateCountdownCompact() { const hours = Math.floor(totalSecondsCompact / 3600); const minutes = Math.floor((totalSecondsCompact % 3600) / 60); const seconds = totalSecondsCompact % 60; const hEl = document.getElementById("hours2"); const mEl = document.getElementById("minutes2"); const sEl = document.getElementById("seconds2"); if (hEl) hEl.innerText = String(hours).padStart(2, "0"); if (mEl) mEl.innerText = String(minutes).padStart(2, "0"); if (sEl) sEl.innerText = String(seconds).padStart(2, "0"); totalSecondsCompact--; if (totalSecondsCompact < 0) totalSecondsCompact = (23 * 3600) + (59 * 60) + 59; }
+    setInterval(updateCountdownCompact, 1000);
+  </script>
+</body>
+</html>
